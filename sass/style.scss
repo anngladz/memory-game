@@ -34,6 +34,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    perspective: 1000px;
 }
 
 .card {
@@ -44,6 +45,8 @@ footer {
     border-radius: 6px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
     transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
     cursor: pointer;
 
     &:active {
@@ -60,4 +63,10 @@ footer {
     position: absolute;
     border-radius: 6px;
     background: #3f5870;
+    backface-visibility: hidden;
+}
+
+.card.flip,
+.front {
+    transform: rotateY(180deg);
 }

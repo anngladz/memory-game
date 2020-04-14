@@ -39,6 +39,8 @@ footer a:visited {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 }
 
 .card {
@@ -51,6 +53,12 @@ footer a:visited {
           box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
   -webkit-transform: scale(1);
           transform: scale(1);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
   cursor: pointer;
 }
 
@@ -69,5 +77,13 @@ footer a:visited {
   position: absolute;
   border-radius: 6px;
   background: #3f5870;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.card.flip,
+.front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 /*# sourceMappingURL=style.css.map */
