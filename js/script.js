@@ -26,7 +26,7 @@ const stopTimer = () => {
     clearInterval(id);
 }
 
-startTimer();
+
 
 function flipCard() {
     if (lock) return;
@@ -90,3 +90,9 @@ cards.forEach(card => card.addEventListener('click', flipCard));
 document.querySelector('.restart').addEventListener('click', function () {
     window.location.reload(true);
 });
+
+document.addEventListener('click', function (event) {
+if (event.target.matches('.back')) {
+        startTimer();
+	} 
+}, {once: true});
