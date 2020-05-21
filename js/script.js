@@ -26,8 +26,6 @@ const stopTimer = () => {
     clearInterval(id);
 }
 
-
-
 function flipCard() {
     if (lock) return;
     if (this === firstCard) return;
@@ -92,7 +90,9 @@ document.querySelector('.restart').addEventListener('click', function () {
 });
 
 document.addEventListener('click', function (event) {
-if (event.target.matches('.back')) {
+    if (event.target.matches('.back')) {
         startTimer();
-	} 
-}, {once: true});
+    }
+}, {
+    once: true
+});

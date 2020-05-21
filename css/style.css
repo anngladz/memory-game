@@ -125,4 +125,19 @@ footer a:visited {
   padding: 10px;
   cursor: pointer;
 }
+
+@media (max-width: 767px) {
+  .game {
+    width: 95vw;
+    height: 70vh;
+  }
+  .front,
+  .back {
+    padding: 2px;
+  }
+  header,
+  footer {
+    margin: 5px 0;
+  }
+}
 /*# sourceMappingURL=style.css.map */
